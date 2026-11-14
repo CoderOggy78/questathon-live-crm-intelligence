@@ -1,0 +1,133 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: #F7F5EF;
+    color: #30251D;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom retro styling matching Questathon visual design */
+.panel {
+  background-color: #FFFFFF;
+  border: 3px solid #30251D;
+  box-shadow: 4px 4px 0px #30251D;
+}
+
+.panel-parchment {
+  background-color: #EEEADD;
+  border: 3px solid #30251D;
+  box-shadow: 4px 4px 0px #30251D;
+}
+
+.panel-dark {
+  background-color: #30251D;
+  color: #EEEADD;
+  border: 3px solid #EEEADD;
+  box-shadow: 4px 4px 0px #E6B800;
+}
+
+.btn-pixel {
+  background-color: #E6B800;
+  color: #30251D;
+  border: 3px solid #30251D;
+  font-weight: 700;
+  padding: 8px 16px;
+  box-shadow: 3px 3px 0px #30251D;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-pixel:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #30251D;
+  background-color: #F3E3A6;
+}
+
+.btn-pixel:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #30251D;
+}
+
+.btn-pixel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-pixel-secondary {
+  background-color: #EEEADD;
+  color: #30251D;
+  border: 3px solid #30251D;
+  font-weight: 700;
+  padding: 8px 16px;
+  box-shadow: 3px 3px 0px #30251D;
+  cursor: pointer;
+}
+
+.btn-pixel-blue {
+  background-color: #1193D4;
+  color: #FFFFFF;
+  border: 3px solid #30251D;
+  font-weight: 700;
+  padding: 8px 16px;
+  box-shadow: 3px 3px 0px #30251D;
+  cursor: pointer;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 2px solid #30251D;
+  text-transform: uppercase;
+}
+
+.badge-verified {
+  background-color: #D1FAE5;
+  color: #065F46;
+  border-color: #065F46;
+}
+
+.badge-told {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border-color: #92400E;
+}
+
+.badge-unverified {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border-color: #991B1B;
+}
+
+.badge-inferred {
+  background-color: #E0E7FF;
+  color: #3730A3;
+  border-color: #3730A3;
+}
+
+.badge-red {
+  background-color: #B8452A;
+  color: #FFFFFF;
+  border-color: #30251D;
+}
+
+.badge-amber {
+  background-color: #D97706;
+  color: #FFFFFF;
+  border-color: #30251D;
+}
+
+.badge-green {
+  background-color: #006E32;
+  color: #FFFFFF;
+  border-color: #30251D;
+}
