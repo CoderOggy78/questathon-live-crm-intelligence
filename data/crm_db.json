@@ -7878,6 +7878,188 @@
           "set_off_at": "2026-11-13T13:32:54.168Z"
         }
       ],
+      "paperwork_summary": {
+        "total_records": 35,
+        "calls": 16,
+        "emails": 5,
+        "records_list": [
+          {
+            "path": "calls/2025-06-24_enquiry_call.txt",
+            "kind": "call",
+            "preview": "ENQUIRY CALL: NOTES\nDate: 24 June 2025\nWritten up by: the FlytBase deal team\nPresent for the customer: Rhys Calder (alliance drone programme lead)\nPresent for FlytBase: Achal Negi\n\nBackground\n- The alliance office runs some programmes jointly for fou"
+          },
+          {
+            "path": "calls/2025-09-02_pilot_scoping.txt",
+            "kind": "call",
+            "preview": "PILOT SCOPING CALL: NOTES\nDate: 2 September 2025\nWritten up by: the FlytBase deal team\nPresent for the customer: Rhys Calder (alliance drone programme lead); Insp. Karen Mbeki (Westmere drone unit)\nPresent for FlytBase: Achal Negi; a solutions engine"
+          },
+          {
+            "path": "calls/2025-10-21_pilot_midpoint.txt",
+            "kind": "call",
+            "preview": "PILOT MID-POINT CALL: NOTES\nDate: 21 October 2025\nWritten up by: a FlytBase solutions engineer\nPresent for the customer: Insp. Karen Mbeki (Westmere drone unit)\nPresent for FlytBase: a solutions engineer\n\nFaults\n- Two docks needed an engineer visit i"
+          },
+          {
+            "path": "calls/2025-12-16_pilot_review.txt",
+            "kind": "call",
+            "preview": "PILOT REVIEW CALL: NOTES\nDate: 16 December 2025\nWritten up by: the FlytBase deal team\nPresent for the customer: Rhys Calder (alliance drone programme lead); Insp. Karen Mbeki (Westmere drone\nunit); the alliance procurement lead (joined for the second"
+          },
+          {
+            "path": "calls/2026-01-13_order_call.txt",
+            "kind": "call",
+            "preview": "ORDER CALL: NOTES\nDate: 13 January 2026\nWritten up by: the FlytBase deal team\nPresent for the customer: Rhys Calder (alliance drone programme lead)\nPresent for FlytBase: Achal Negi\n\nOrder\n- 35 docks for the four forces, one order, placed and signed b"
+          },
+          {
+            "path": "calls/2026-02-17_install_kickoff.txt",
+            "kind": "call",
+            "preview": "INSTALLATION KICK-OFF: NOTES\nDate: 17 February 2026\nWritten up by: the FlytBase onboarding lead\nPresent for the customer: Rhys Calder (alliance drone programme lead)\nPresent for FlytBase: the onboarding lead\n\nPlan\n- 35 docks in March and April.\n- Sit"
+          },
+          {
+            "path": "calls/2026-03-24_install_check_in.txt",
+            "kind": "call",
+            "preview": "INSTALLATION CHECK-IN: NOTES\nDate: 24 March 2026\nWritten up by: the FlytBase onboarding lead\nPresent for the customer: Rhys Calder (alliance drone programme lead)\nPresent for FlytBase: the onboarding lead\n\nProgress\n- 19 of 35 docks installed and comm"
+          },
+          {
+            "path": "calls/2026-04-28_install_close.txt",
+            "kind": "call",
+            "preview": "INSTALLATION CLOSE CALL: NOTES\nDate: 28 April 2026\nWritten up by: the FlytBase onboarding lead, for the handover to customer success\nPresent for the customer: Rhys Calder (alliance drone programme lead)\nPresent for FlytBase: the onboarding lead\n\nStat"
+          },
+          {
+            "path": "calls/2026-05-19_intro_call.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 19 May 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nSam: Thanks for making time. I have just picked up the account, so I wanted to hear how the rollout\nlooks from yo"
+          },
+          {
+            "path": "calls/2026-06-02_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 2 June 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nSam: I sent the May summary yesterday. Did the chart do the job?\nRhys: The board loved it. Next time, can you spl"
+          },
+          {
+            "path": "calls/2026-06-30_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 30 June 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nSam: June goes to you tomorrow. The headline is the same as May: a small number of docks do most of\nthe flying.\n"
+          },
+          {
+            "path": "calls/2026-07-22_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 22 July 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nRhys: Big news since we last spoke. The alliance is preparing a framework tender. Up to 300 docks.\nThe spec is b"
+          },
+          {
+            "path": "calls/2026-08-19_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 19 August 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nSam: Welcome back. I owe you the July summary. It did not go out.\nRhys: No matter. Send July and August togeth"
+          },
+          {
+            "path": "calls/2026-09-09_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 9 September 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nSam: Thank you for the reply last week. I would still like to hear from the forces that are not\nflying, even"
+          },
+          {
+            "path": "calls/2026-10-06_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 6 October 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nRhys: I have another one for you. Westmere's stadium project. It is a 30-dock opportunity.\nSam: Thirty docks a"
+          },
+          {
+            "path": "calls/2026-10-20_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 20 October 2026\nOn the call: Sam (FlytBase, CSM); Rhys Calder (alliance drone programme lead)\n\nRhys: Where is my stadium quote?\nSam: There is not one yet. It is with our commercial team.\nRhys: I need a nu"
+          },
+          {
+            "path": "calls_index.json",
+            "kind": "calls_index",
+            "preview": "{\"note\": \"Every call on file, oldest first, with its summary and actions. `path` is the notes or transcript where one was kept; a call with no path was summarised only.\", \"calls\": [{\"date\": \"2025-06-24\", \"title\": \"Enquiry call\", \"record\": \"notes\", \"c"
+          },
+          {
+            "path": "contract.txt",
+            "kind": "contract",
+            "preview": "ORDER FORM SUMMARY (customer success copy)\nCustomer: Eastern Counties Police Alliance, alliance office, for its member forces\nSigned: 20 January 2026, by the alliance office\nCurrency: pounds sterling\n\nWhat was ordered\n- 35 docks with aircraft, and th"
+          },
+          {
+            "path": "deal_history.json",
+            "kind": "deal_history",
+            "preview": "{\"account\": \"A\", \"currency\": \"GBP\", \"history\": [{\"date\": \"2025-06\", \"what\": \"Enquiry\", \"detail\": \"Rhys Calder, from the alliance office, asked about docks for the alliance's joint drone programme.\"}, {\"date\": \"2025-09-15\", \"what\": \"Pilot starts\", \"de"
+          },
+          {
+            "path": "device_events.csv",
+            "kind": "device_events",
+            "preview": "date,time,dock_id,event,detail\n2026-05-01,22:12,ECPA-D24,connection_lost,\n2026-05-01,22:51,ECPA-D24,connection_restored,\n2026-05-02,21:18,ECPA-D28,connection_lost,\n2026-05-02,21:55,ECPA-D28,connection_restored,\n2026-05-02,21:57,ECPA-D26,connection_lo"
+          },
+          {
+            "path": "devices.json",
+            "kind": "devices",
+            "preview": "{\"note\": \"Docks registered to this account, with the date each was commissioned under the current order (docks from a pilot or trial were commissioned again). Which site each dock sits at is not in this record.\", \"docks\": [{\"dock_id\": \"ECPA-D01\", \"do"
+          },
+          {
+            "path": "emails/2026-07-09_rhys_tender.txt",
+            "kind": "email",
+            "preview": "From: Rhys Calder\nTo: Sam (FlytBase)\nDate: 9 July 2026\nSubject: Something big coming\n\nSam,\n\nA heads-up before our call. The alliance is preparing a framework tender for up to 300 docks. The\nspec is being finalised. I wanted you to hear it from me fir"
+          },
+          {
+            "path": "emails/2026-08-11_karen_batteries.txt",
+            "kind": "email",
+            "preview": "From: Insp. Karen Mbeki\nTo: Sam (FlytBase)\nDate: 11 August 2026\nSubject: Batteries on two docks\n\nSam,\n\nTwo of our docks have batteries that will not last a night shift any more. We are swapping aircraft\nbetween docks to cope, which is not what my off"
+          },
+          {
+            "path": "emails/2026-09-03_usage_question.txt",
+            "kind": "email",
+            "preview": "From: Sam (FlytBase)\nTo: Rhys Calder\nDate: 3 September 2026\nSubject: Docks that have not flown\n\nRhys,\n\nLooking at the summer: a good number of the 35 docks are online every day and have still flown\nnothing, or only the odd training flight. I would li"
+          },
+          {
+            "path": "emails/2026-10-02_rhys_stadium.txt",
+            "kind": "email",
+            "preview": "From: Rhys Calder\nTo: Sam (FlytBase)\nDate: 2 October 2026\nSubject: Stadium\n\nSam,\n\nWestmere's stadium project is a 30-dock opportunity. Can we talk Tuesday? I will want a quote\nquickly.\n\nRhys\n"
+          },
+          {
+            "path": "emails/2026-10-28_renewal.txt",
+            "kind": "email",
+            "preview": "From: Sam (FlytBase)\nTo: Rhys Calder\nDate: 28 October 2026\nSubject: Renewal, term ends 28 February\n\nRhys,\n\nThe current term ends on 28 February and there is no automatic renewal, so we will need a new order\nbefore then. Who signs it on your side, and"
+          },
+          {
+            "path": "flights.csv",
+            "kind": "flights",
+            "preview": "flight_id,date,start_time,dock_id,duration_min,mode,result,note\nECPA-F00001,2026-05-01,01:09,ECPA-D33,10,manual,returned_early,operator recall\nECPA-F00002,2026-05-01,11:03,ECPA-D30,15,manual,completed,\nECPA-F00003,2026-05-01,11:58,ECPA-D13,22,manual,"
+          },
+          {
+            "path": "internal_notes.json",
+            "kind": "internal_notes",
+            "preview": "{\"note\": \"Notes about the account from FlytBase's internal channel, oldest first. Fictional personas; routine notes only.\", \"notes\": [{\"date\": \"2026-01-21\", \"from\": \"Deal team\", \"text\": \"ECPA order signed by the alliance office. Invoicing in four par"
+          },
+          {
+            "path": "invoices.json",
+            "kind": "invoices",
+            "preview": "{\"currency\": \"GBP\", \"note\": \"From FlytBase Accounts. The four parts of the first-year invoice, their addresses and their amounts are in Schedule 2 of the order, which Accounts holds and which was not copied to customer success.\", \"invoices\": [{\"numbe"
+          },
+          {
+            "path": "mail_log.json",
+            "kind": "mail_log",
+            "preview": "{\"note\": \"Every email on file for the account, oldest first: written by people, and sent automatically by the platform. The threads in emails/ are listed here by path.\", \"mail\": [{\"thread\": \"T001\", \"kind\": \"person\", \"date\": \"2025-07-08\", \"from\": \"Ach"
+          },
+          {
+            "path": "profile.json",
+            "kind": "profile",
+            "preview": "{\"account\": \"A\", \"name\": \"Eastern Counties Police Alliance\", \"currency\": \"GBP\", \"sector\": \"Public safety\", \"what_they_bought\": \"35 docks and the FlytBase platform, one order placed through the alliance office for the four member forces (Westmere, Met"
+          },
+          {
+            "path": "requests.csv",
+            "kind": "requests",
+            "preview": "request_id,opened,from,summary,status,owner,last_update,how_it_arrived\nFB-10412,2026-06-29,\"A contact at one of the forces (details with the support desk)\",\"Document request. The requester has chased. No reply sent.\",Open,,2026-08-14,Support ticket\nF"
+          },
+          {
+            "path": "tickets.json",
+            "kind": "tickets",
+            "preview": "{\"note\": \"Every support ticket on the account, oldest first. Ticket numbers run across all FlytBase customers. requests.csv is customer success's own list of what it was tracking at the handover, which also holds requests that never became tickets.\","
+          },
+          {
+            "path": "usage_weekly.csv",
+            "kind": "usage",
+            "preview": "week_start,dock_id,flights,days_online\n2026-04-27,ECPA-D01,0,7\n2026-05-04,ECPA-D01,1,7\n2026-05-11,ECPA-D01,1,7\n2026-05-18,ECPA-D01,1,7\n2026-05-25,ECPA-D01,2,7\n2026-06-01,ECPA-D01,0,7\n2026-06-08,ECPA-D01,3,7\n2026-06-15,ECPA-D01,4,7\n2026-06-22,ECPA-D01"
+          },
+          {
+            "path": "users.json",
+            "kind": "users",
+            "preview": "{\"note\": \"Logins on the account. Names are shown only for people on file as contacts. Which force a login belongs to is not in this record.\", \"users\": [{\"user_id\": \"U01\", \"name\": \"Rhys Calder\", \"role\": \"account administrator\", \"created\": \"2026-02-20\""
+          }
+        ]
+      },
       "raw_facts": [
         {
           "id": "rc_appetite_0",
@@ -12286,6 +12468,163 @@
           "set_off_at": "2026-11-13T13:33:17.704Z"
         }
       ],
+      "paperwork_summary": {
+        "total_records": 30,
+        "calls": 12,
+        "emails": 4,
+        "records_list": [
+          {
+            "path": "calls/2025-08-19_enquiry_call.txt",
+            "kind": "call",
+            "preview": "ENQUIRY CALL: NOTES\nDate: 19 August 2025\nWritten up by: the FlytBase deal team\nPresent for the customer: Stefan Roy (group head of security)\nPresent for FlytBase: Achal Negi\n\nBackground\n- Aldermoor has 15 plants. Group security, under Stefan Roy, loo"
+          },
+          {
+            "path": "calls/2025-10-07_trial_kickoff.txt",
+            "kind": "call",
+            "preview": "TRIAL KICK-OFF: NOTES\nDate: 7 October 2025\nWritten up by: a FlytBase solutions engineer\nPresent for the customer: Stefan Roy (group head of security); his deputy (name not recorded)\nPresent for FlytBase: a solutions engineer\n\nTrial\n- 2 docks at two p"
+          },
+          {
+            "path": "calls/2025-12-11_trial_review.txt",
+            "kind": "call",
+            "preview": "TRIAL REVIEW CALL: NOTES\nDate: 11 December 2025\nWritten up by: the FlytBase deal team\nPresent for the customer: Stefan Roy (group head of security); his deputy (name not recorded)\nPresent for FlytBase: Achal Negi; a solutions engineer\n\nTrial\n- 2 dock"
+          },
+          {
+            "path": "calls/2026-01-08_order_call.txt",
+            "kind": "call",
+            "preview": "ORDER CALL: NOTES\nDate: 8 January 2026\nWritten up by: the FlytBase deal team\nPresent for the customer: Stefan Roy (group head of security)\nPresent for FlytBase: Achal Negi\n\nOrder\n- 14 docks, 140,000 a year, one year from 1 February 2026. No automatic"
+          },
+          {
+            "path": "calls/2026-02-10_rollout_kickoff.txt",
+            "kind": "call",
+            "preview": "ROLLOUT KICK-OFF: NOTES\nDate: 10 February 2026\nWritten up by: the FlytBase rollout lead\nPresent for the customer: Stefan Roy's deputy (name not recorded)\nPresent for FlytBase: the rollout lead\n\nPlan\n- 14 docks, February to April.\n- The deputy visits "
+          },
+          {
+            "path": "calls/2026-03-17_rollout_check_in.txt",
+            "kind": "call",
+            "preview": "ROLLOUT CHECK-IN: NOTES\nDate: 17 March 2026\nWritten up by: the FlytBase rollout lead\nPresent for the customer: Stefan Roy's deputy (name not recorded)\nPresent for FlytBase: the rollout lead\n\nProgress\n- 8 of 14 docks installed and commissioned.\n- At t"
+          },
+          {
+            "path": "calls/2026-04-23_rollout_close.txt",
+            "kind": "call",
+            "preview": "ROLLOUT CLOSE CALL: NOTES\nDate: 23 April 2026\nWritten up by: the FlytBase rollout lead, for the handover to customer success\nPresent for the customer: Stefan Roy's deputy (led the rollout on their side)\nPresent for FlytBase: the rollout lead\n\nStatus\n"
+          },
+          {
+            "path": "calls/2026-05-21_intro_call.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 21 May 2026\nOn the call: Sam (FlytBase, CSM); Stefan Roy (group head of security)\n\nSam: I have just picked up the account. How does the rollout look from where you sit?\nStefan: A success. Fourteen docks i"
+          },
+          {
+            "path": "calls/2026-06-11_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 11 June 2026\nOn the call: Sam (FlytBase, CSM); Stefan Roy (group head of security)\n\nStefan: I present to the board next week. I want three or four clips, night patrols, something that\nlooks good.\nSam: I c"
+          },
+          {
+            "path": "calls/2026-07-14_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 14 July 2026\nOn the call: Sam (FlytBase, CSM); Stefan Roy (group head of security)\n\nStefan: I will give you the headline. ROI is proven. About 1.2 million euros a year saved.\nSam: That is a strong number."
+          },
+          {
+            "path": "calls/2026-08-25_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 25 August 2026\nOn the call: Sam (FlytBase, CSM); Stefan Roy (group head of security)\n\nSam: One thing I am still missing: the list of who receives the alerts at each plant. When a\npatrol flags something at"
+          },
+          {
+            "path": "calls/2026-10-13_check_in.txt",
+            "kind": "call",
+            "preview": "CALL TRANSCRIPT (auto-recorded, tidied)\nDate: 13 October 2026\nOn the call: Sam (FlytBase, CSM); Stefan Roy (group head of security)\n\nStefan: Where are we with the case study? Our sister company has forty plants. I want to put it in\nfront of them this"
+          },
+          {
+            "path": "calls_index.json",
+            "kind": "calls_index",
+            "preview": "{\"note\": \"Every call on file, oldest first, with its summary and actions. `path` is the notes or transcript where one was kept; a call with no path was summarised only.\", \"calls\": [{\"date\": \"2025-08-19\", \"title\": \"Enquiry call\", \"record\": \"notes\", \"c"
+          },
+          {
+            "path": "contract.txt",
+            "kind": "contract",
+            "preview": "ORDER FORM SUMMARY (customer success copy)\nCustomer: Aldermoor Industrial Group, group security\nSigned: 15 January 2026, by Stefan Roy, group head of security\nCurrency: euros\n\nWhat was ordered\n- 14 docks with aircraft, and the FlytBase platform for a"
+          },
+          {
+            "path": "deal_history.json",
+            "kind": "deal_history",
+            "preview": "{\"account\": \"B\", \"currency\": \"EUR\", \"history\": [{\"date\": \"2025-08\", \"what\": \"Enquiry\", \"detail\": \"Stefan Roy, group head of security, asked about automated night patrols for the group's plants.\"}, {\"date\": \"2025-10 to 2025-12\", \"what\": \"Trial\", \"deta"
+          },
+          {
+            "path": "device_events.csv",
+            "kind": "device_events",
+            "preview": "date,time,dock_id,event,detail\n2026-05-01,06:41,AD-12,connection_lost,\n2026-05-01,06:57,AD-12,connection_restored,\n2026-05-02,02:57,AD-14,connection_lost,\n2026-05-02,03:14,AD-14,connection_restored,\n2026-05-03,01:05,AD-12,connection_lost,\n2026-05-03,"
+          },
+          {
+            "path": "devices.json",
+            "kind": "devices",
+            "preview": "{\"note\": \"Docks registered to this account, with the date each was commissioned under the current order (docks from a pilot or trial were commissioned again). Which site each dock sits at is not in this record.\", \"docks\": [{\"dock_id\": \"AD-01\", \"dock_"
+          },
+          {
+            "path": "emails/2026-07-16_stefan_savings.txt",
+            "kind": "email",
+            "preview": "From: Stefan Roy\nTo: Sam (FlytBase)\nDate: 16 July 2026\nSubject: The number\n\nSam,\n\nAs discussed: ROI is proven, about 1.2 million euros a year saved. Thirteen of fifteen plants are\nflying. Feel free to use that internally.\n\nI will send the detail when"
+          },
+          {
+            "path": "emails/2026-09-18_beatriz_alerts.txt",
+            "kind": "email",
+            "preview": "From: Beatriz Alonso\nTo: Support desk\nDate: 18 September 2026\nSubject: Who gets the alerts at night (FB-10944)\n\nHello,\n\nI am the plant manager at Plant 7. Can the night alerts from our dock go to more than one person?\nPlease tell me how to change it."
+          },
+          {
+            "path": "emails/2026-09-22_stefan_case_study.txt",
+            "kind": "email",
+            "preview": "From: Stefan Roy\nTo: Sam (FlytBase)\nDate: 22 September 2026\nSubject: Case study\n\nSam,\n\nI want a case study for our sister company. They have 40 plants and they are watching what we do\nhere. Two pages, the headline saving on the front. When can I see "
+          },
+          {
+            "path": "emails/2026-10-08_finance_mailbox.txt",
+            "kind": "email",
+            "preview": "From: Group Finance (shared mailbox), Aldermoor Industrial Group\nTo: Sam (FlytBase)\nDate: 8 October 2026\nSubject: Renewal quote, drone docks\n\nHello,\n\nWe understand the dock contract renews at the end of January. Before a renewal is raised, please\nsen"
+          },
+          {
+            "path": "flights.csv",
+            "kind": "flights",
+            "preview": "flight_id,date,start_time,dock_id,duration_min,mode,result,note\nAD-F00001,2026-05-01,02:18,AD-02,20,scheduled,completed,\nAD-F00002,2026-05-01,02:45,AD-10,23,scheduled,completed,\nAD-F00003,2026-05-01,23:47,AD-05,16,scheduled,completed,\nAD-F00004,2026-"
+          },
+          {
+            "path": "internal_notes.json",
+            "kind": "internal_notes",
+            "preview": "{\"note\": \"Notes about the account from FlytBase's internal channel, oldest first. Fictional personas; routine notes only.\", \"notes\": [{\"date\": \"2026-01-16\", \"from\": \"Deal team\", \"text\": \"Aldermoor order signed by Stefan Roy. One invoice a year to gro"
+          },
+          {
+            "path": "invoices.json",
+            "kind": "invoices",
+            "preview": "{\"currency\": \"EUR\", \"note\": \"From FlytBase Accounts. One invoice a year, to group security.\", \"invoices\": [{\"number\": \"INV-25-1012\", \"issued\": \"2025-10-06\", \"what\": \"Trial fee, 2 docks\", \"amount\": 12000, \"status\": \"Paid\", \"paid\": \"2025-10-30\", \"note\""
+          },
+          {
+            "path": "mail_log.json",
+            "kind": "mail_log",
+            "preview": "{\"note\": \"Every email on file for the account, oldest first: written by people, and sent automatically by the platform. The threads in emails/ are listed here by path.\", \"mail\": [{\"thread\": \"T001\", \"kind\": \"person\", \"date\": \"2025-09-09\", \"from\": \"Ach"
+          },
+          {
+            "path": "profile.json",
+            "kind": "profile",
+            "preview": "{\"account\": \"B\", \"name\": \"Aldermoor Industrial Group\", \"currency\": \"EUR\", \"sector\": \"Industrial sites, perimeter security\", \"what_they_bought\": \"14 docks and the FlytBase platform for night perimeter patrols at the group's plants. The group has 15 pl"
+          },
+          {
+            "path": "requests.csv",
+            "kind": "requests",
+            "preview": "request_id,opened,from,summary,status,owner,last_update,how_it_arrived\nFB-10903,2026-09-10,Aldermoor Plant 11,\"Dock goes offline for days at a time. The network link at the plant drops. Waiting for the customer's IT team to look at the link.\",Pending"
+          },
+          {
+            "path": "tickets.json",
+            "kind": "tickets",
+            "preview": "{\"note\": \"Every support ticket on the account, oldest first. Ticket numbers run across all FlytBase customers. requests.csv is customer success's own list of what it was tracking at the handover, which also holds requests that never became tickets.\","
+          },
+          {
+            "path": "usage_weekly.csv",
+            "kind": "usage",
+            "preview": "week_start,dock_id,flights,days_online\n2026-04-27,AD-01,0,7\n2026-05-04,AD-01,1,7\n2026-05-11,AD-01,0,7\n2026-05-18,AD-01,0,7\n2026-05-25,AD-01,1,7\n2026-06-01,AD-01,1,7\n2026-06-08,AD-01,1,7\n2026-06-15,AD-01,0,7\n2026-06-22,AD-01,0,7\n2026-06-29,AD-01,1,7\n2"
+          },
+          {
+            "path": "users.json",
+            "kind": "users",
+            "preview": "{\"note\": \"Logins on the account. Names are shown only for people on file as contacts. Which plant a login belongs to is not in this record. The order form provides for one trained operator at each plant.\", \"users\": [{\"user_id\": \"U01\", \"name\": \"Stefan"
+          }
+        ]
+      },
       "raw_facts": [
         {
           "id": "sr_roi_0",

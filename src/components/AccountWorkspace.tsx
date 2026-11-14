@@ -42,7 +42,7 @@ export default function AccountWorkspace({
   const isA = accountId === "A";
   const currencySymbol = acc.currency_symbol || (isA ? "£" : "€");
 
-  const filteredFacts = acc.raw_facts.filter((f: any) => {
+  const filteredFacts = (acc.raw_facts || []).filter((f: any) => {
     if (filterFactStatus === "all") return true;
     return f.status === filterFactStatus;
   });
@@ -154,7 +154,7 @@ export default function AccountWorkspace({
           <div>
             <h3 className="font-mono font-bold text-base text-ink flex items-center gap-2">
               <FileText className="w-4 h-4 text-electricBlue" />
-              DISCOVERY STATEMENTS & AUDIT LOG ({acc.raw_facts.length} ITEMS)
+              DISCOVERY STATEMENTS & AUDIT LOG ({acc.raw_facts?.length || 0} ITEMS)
             </h3>
             <p className="text-xs text-zinc-600 font-mono">
               Statements logged during discovery with explicit verification status
@@ -236,10 +236,10 @@ export default function AccountWorkspace({
           <div>
             <h3 className="font-mono font-bold text-base text-ink flex items-center gap-2">
               <FileText className="w-4 h-4 text-ink" />
-              OFFICIAL PAPERWORK ARCHIVE ({acc.paperwork_summary.total_records} RECORDS)
+              OFFICIAL PAPERWORK ARCHIVE ({acc.paperwork_summary?.total_records || 0} RECORDS)
             </h3>
             <p className="text-xs text-zinc-600 font-mono">
-              Calls ({acc.paperwork_summary.calls}), Emails ({acc.paperwork_summary.emails}), Contracts, Invoices, Tickets, Flights & Weekly Usage
+              Calls ({acc.paperwork_summary?.calls || 0}), Emails ({acc.paperwork_summary?.emails || 0}), Contracts, Invoices, Tickets, Flights & Weekly Usage
             </p>
           </div>
           <button
@@ -253,8 +253,8 @@ export default function AccountWorkspace({
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {(showAllRecords
-            ? acc.paperwork_summary.records_list
-            : acc.paperwork_summary.records_list.slice(0, 6)
+            ? acc.paperwork_summary?.records_list || []
+            : (acc.paperwork_summary?.records_list || []).slice(0, 6)
           ).map((rec: any) => (
             <div
               key={rec.path}

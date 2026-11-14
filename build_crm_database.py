@@ -572,6 +572,19 @@ def build_db():
                 }
             },
             "signals": acc_signals,
+            "paperwork_summary": {
+                "total_records": len(records),
+                "calls": len([r for r in records.values() if r.get("kind") == "call"]),
+                "emails": len([r for r in records.values() if r.get("kind") == "email"]),
+                "records_list": [
+                    {
+                        "path": r["path"],
+                        "kind": r.get("kind", "doc"),
+                        "preview": (r.get("text") or json.dumps(r.get("data", {})))[:250]
+                    }
+                    for r in records.values()
+                ]
+            },
             "raw_facts": raw_acc.get("facts", []),
             "raw_offers": raw_acc.get("offers", []),
             "raw_deadlines": raw_acc.get("deadlines", [])
