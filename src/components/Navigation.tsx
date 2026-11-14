@@ -16,7 +16,9 @@ import {
   Server,
   PenSquare,
   Receipt,
-  Briefcase
+  Briefcase,
+  Sparkles,
+  Sliders
 } from "lucide-react";
 
 interface NavigationProps {
@@ -39,6 +41,18 @@ export default function Navigation({
       label: "Monday Handover",
       icon: Briefcase,
       badge: "HAND IN",
+    },
+    {
+      id: "copilot",
+      label: "AI Copilot",
+      icon: Sparkles,
+      badge: "AI INTEL",
+    },
+    {
+      id: "simulator",
+      label: "Revenue Simulator",
+      icon: Sliders,
+      badge: "SCENARIOS",
     },
     { id: "accounts", label: "Accounts Directory", icon: Building2 },
     { id: "ledger", label: "Commercial Ledger", icon: Receipt },

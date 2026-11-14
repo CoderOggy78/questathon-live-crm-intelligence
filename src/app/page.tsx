@@ -17,6 +17,8 @@ import LiveEvents from "../components/LiveEvents";
 import SyncSystemStatus from "../components/SyncSystemStatus";
 import UsageTelemetry from "../components/UsageTelemetry";
 import InteractionsTimeline from "../components/InteractionsTimeline";
+import AICopilot from "../components/AICopilot";
+import RevenueSimulator from "../components/RevenueSimulator";
 import EvidenceModal from "../components/EvidenceModal";
 import WriteNoteModal from "../components/WriteNoteModal";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -119,6 +121,21 @@ export default function Home() {
                     data={data}
                     setTab={setTab}
                     openNoteModal={() => setNoteModalOpen(true)}
+                  />
+                )}
+
+                {currentTab === "copilot" && (
+                  <AICopilot
+                    onViewEvidence={handleViewEvidence}
+                    openNoteModal={() => setNoteModalOpen(true)}
+                  />
+                )}
+
+                {currentTab === "simulator" && (
+                  <RevenueSimulator
+                    data={data}
+                    openNoteModal={() => setNoteModalOpen(true)}
+                    onViewEvidence={handleViewEvidence}
                   />
                 )}
 
