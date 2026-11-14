@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import ExecutiveOverview from "../components/ExecutiveOverview";
+import MondayBriefing from "../components/MondayBriefing";
 import AccountWorkspace from "../components/AccountWorkspace";
 import CommercialLedger from "../components/CommercialLedger";
 import DealIntelligence from "../components/DealIntelligence";
@@ -110,6 +111,14 @@ export default function Home() {
                     setTab={setTab}
                     setSelectedAccount={setSelectedAccount}
                     onViewEvidence={handleViewEvidence}
+                  />
+                )}
+
+                {currentTab === "briefing" && (
+                  <MondayBriefing
+                    data={data}
+                    setTab={setTab}
+                    openNoteModal={() => setNoteModalOpen(true)}
                   />
                 )}
 

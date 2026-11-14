@@ -15,7 +15,8 @@ import {
   Radio,
   Server,
   PenSquare,
-  Receipt
+  Receipt,
+  Briefcase
 } from "lucide-react";
 
 interface NavigationProps {
@@ -33,6 +34,12 @@ export default function Navigation({
 }: NavigationProps) {
   const tabs = [
     { id: "overview", label: "Book of Business", icon: LayoutDashboard },
+    {
+      id: "briefing",
+      label: "Monday Handover",
+      icon: Briefcase,
+      badge: "HAND IN",
+    },
     { id: "accounts", label: "Accounts Directory", icon: Building2 },
     { id: "ledger", label: "Commercial Ledger", icon: Receipt },
     { id: "usage", label: "Usage & Telemetry", icon: Activity },

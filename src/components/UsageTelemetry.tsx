@@ -220,7 +220,7 @@ export default function UsageTelemetry({
                 <th className="py-2.5 px-3">ACCOUNT</th>
                 <th className="py-2.5 px-3">MODEL & SERIAL</th>
                 <th className="py-2.5 px-3 text-right">TOTAL FLIGHTS</th>
-                <th className="py-2.5 px-3 text-right">DAYS ONLINE</th>
+                <th className="py-2.5 px-3">27-WEEK ACTIVITY HEATMAP (MAY - NOV 2026)</th>
                 <th className="py-2.5 px-3">STATUS & TELEMETRY NOTES</th>
                 <th className="py-2.5 px-3 text-right">ACTION</th>
               </tr>
@@ -228,6 +228,7 @@ export default function UsageTelemetry({
             <tbody className="divide-y divide-zinc-200">
               {filteredDocks.map((dock) => {
                 const isA = dock.account === "A";
+                const isBlackoutDock = ["AD-02", "AD-05", "AD-10"].includes(dock.dock_id);
                 return (
                   <tr
                     key={dock.dock_id}
@@ -260,10 +261,37 @@ export default function UsageTelemetry({
                       <span className={`text-sm ${dock.total_flights > 0 ? "text-emerald-700" : "text-zinc-400"}`}>
                         {dock.total_flights} flights
                       </span>
+                      <span className="text-[10px] text-zinc-500 block">
+                        {dock.total_days_online} days online
+                      </span>
                     </td>
 
-                    <td className="py-3 px-3 text-right text-zinc-600 whitespace-nowrap">
-                      {dock.total_days_online} days
+                    {/* 27-Week Activity Sparkline Heatmap */}
+                    <td className="py-3 px-3">
+                      <div className="flex items-center gap-0.5 flex-wrap max-w-xs">
+                        {(dock.history || []).map((w: any, wIdx: number) => {
+                          const isLastWeeks = wIdx >= (dock.history.length - 4);
+                          const isZero = w.flights === 0;
+                          let bg = "bg-zinc-200";
+                          if (isBlackoutDock && isLastWeeks && isZero) {
+                            bg = "bg-red-600 border border-red-900";
+                          } else if (w.flights >= 4) {
+                            bg = "bg-emerald-700";
+                          } else if (w.flights >= 1) {
+                            bg = "bg-emerald-400";
+                          }
+                          return (
+                            <span
+                              key={w.week || wIdx}
+                              title={`Week ${w.week}: ${w.flights} flights (${w.days_online}d online)`}
+                              className={`w-2.5 h-3.5 inline-block ${bg} cursor-pointer hover:ring-1 hover:ring-ink transition-transform hover:scale-125`}
+                            />
+                          );
+                        })}
+                      </div>
+                      <span className="text-[9px] text-zinc-400 font-mono block mt-1">
+                        May &apos;26 ─────────────── Nov &apos;26 (Hover week)
+                      </span>
                     </td>
 
                     <td className="py-3 px-3">

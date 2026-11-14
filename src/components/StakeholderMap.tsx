@@ -88,6 +88,35 @@ export default function StakeholderMap({
             <strong>CHAMPION:</strong> Drives internal adoption (verify longevity!).
           </div>
         </div>
+
+        {/* Visual Org Structure & Power Lines */}
+        <div className="p-4 bg-zinc-900 text-emerald-400 font-mono text-xs border-2 border-ink space-y-1">
+          <div className="text-pixelYellow font-bold text-[11px] mb-2 uppercase">
+            {selectedAccount === "A" ? "POLICE ALLIANCE DECISION HIERARCHY" : "ALDERMOOR INDUSTRIAL DECISION HIERARCHY"}
+          </div>
+          {selectedAccount === "A" ? (
+            <pre className="text-[11px] leading-relaxed overflow-x-auto text-zinc-200">
+{`[ALLIANCE LEVEL]
+ └── Rhys Calder (Alliance Drone Lead) ─────────── [CHAMPION] ────► Exiting Jan 2027
+
+[MEMBER FORCES - INDEPENDENT BUDGETS]
+ ├── Westmere: Insp. Karen Mbeki (Drone Unit) ─── [USER / EVAL] ──► 1,497 flights, Urgent 5 Dec Ticket
+ ├── Metro Central: Ewan Brooks (Finance Partner) ─ [BUDGET / BUYER] ► Confirmed: NO POOLED BUDGET
+ ├── Tarn Valley: Fatima Osei (DPO) ───────────── [BLOCKER / VETO] ► 4-mo unanswered DPIA ticket
+ └── Norwold: Drone Ops Team ──────────────────── [AWAITING DPIA] ─► Waiting to clone Tarn Valley`}
+            </pre>
+          ) : (
+            <pre className="text-[11px] leading-relaxed overflow-x-auto text-zinc-200">
+{`[GROUP EXECUTIVE]
+ └── Stefan Roy (Head of Group Security) ───────── [CHAMPION] ────► Claims €1.2M unbooked savings
+      ├── Departing Deputy (Rollout Lead) ──────── [TECHNICAL] ───► ONLY person who knows setup; leaving!
+      └── Group Finance (Shared Mailbox) ───────── [BUDGET / BUYER] ► Disputed €1.2M savings; wants plant audit
+
+[PLANT MANAGERS]
+ └── Beatriz Alonso (Plant 7 Manager) ──────────── [SKEPTIC] ─────► Resents paying; guards ignore alerts`}
+            </pre>
+          )}
+        </div>
       </div>
 
       {/* Stakeholder Cards */}
