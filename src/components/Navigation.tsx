@@ -18,7 +18,8 @@ import {
   Receipt,
   Briefcase,
   Sparkles,
-  Sliders
+  Sliders,
+  Compass
 } from "lucide-react";
 
 interface NavigationProps {
@@ -53,6 +54,12 @@ export default function Navigation({
       label: "Revenue Simulator",
       icon: Sliders,
       badge: "SCENARIOS",
+    },
+    {
+      id: "radar",
+      label: "Fleet Radar",
+      icon: Compass,
+      badge: "TACTICAL",
     },
     { id: "accounts", label: "Accounts Directory", icon: Building2 },
     { id: "ledger", label: "Commercial Ledger", icon: Receipt },

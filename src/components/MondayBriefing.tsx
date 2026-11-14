@@ -18,16 +18,20 @@ import {
   Zap
 } from "lucide-react";
 
+import AudioBriefingPlayer from "./AudioBriefingPlayer";
+
 interface MondayBriefingProps {
   data: any;
   setTab: (tab: string) => void;
   openNoteModal: () => void;
+  onOpenBattlePlan?: () => void;
 }
 
 export default function MondayBriefing({
   data,
   setTab,
   openNoteModal,
+  onOpenBattlePlan,
 }: MondayBriefingProps) {
   const [copied, setCopied] = useState(false);
 
@@ -125,6 +129,9 @@ TOTAL PORTFOLIO AT RISK: £490,000 ARR (Non-automatic renewals)
 
   return (
     <div className="space-y-6">
+      {/* Audio Briefing Player */}
+      <AudioBriefingPlayer />
+
       {/* Top Banner */}
       <div className="panel p-6 bg-parchmentDark border-[3px] border-ink shadow-retroLg space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b-2 border-ink pb-4">
@@ -141,19 +148,28 @@ TOTAL PORTFOLIO AT RISK: £490,000 ARR (Non-automatic renewals)
           </div>
 
           <div className="flex items-center gap-2">
+            {onOpenBattlePlan && (
+              <button
+                onClick={onOpenBattlePlan}
+                className="px-3.5 py-1.5 bg-pixelYellow hover:bg-yellow-400 text-ink border-2 border-ink shadow-retro font-mono font-extrabold text-xs flex items-center gap-1.5 cursor-pointer"
+              >
+                <Zap className="w-4 h-4 fill-ink animate-pulse" />
+                <span>DEPLOY BATTLE PLAN</span>
+              </button>
+            )}
             <button
               onClick={handleCopy}
               className="px-3 py-1.5 text-xs font-bold font-mono bg-white text-ink border-2 border-ink hover:bg-pixelYellow shadow-sm flex items-center gap-1.5"
             >
               {copied ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" /> : <Copy className="w-3.5 h-3.5" />}
-              <span>{copied ? "COPIED TO CLIPBOARD" : "COPY MEMO TEXT"}</span>
+              <span>{copied ? "COPIED" : "COPY TEXT"}</span>
             </button>
             <button
               onClick={handlePrint}
               className="btn-pixel text-xs py-1.5 px-3 flex items-center gap-1.5"
             >
               <Printer className="w-3.5 h-3.5" />
-              <span>PRINT / PDF DOSSIER</span>
+              <span>PRINT / PDF</span>
             </button>
           </div>
         </div>

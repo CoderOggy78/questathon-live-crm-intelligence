@@ -14,14 +14,19 @@ import {
   Plane,
   Users,
   Search,
-  ExternalLink
+  ExternalLink,
+  Zap,
+  Sliders,
+  Compass
 } from "lucide-react";
+import AudioBriefingPlayer from "./AudioBriefingPlayer";
 
 interface ExecutiveOverviewProps {
   data: any;
   setTab: (tab: string) => void;
   setSelectedAccount: (acc: string) => void;
   onViewEvidence: (id: string, account: string) => void;
+  onOpenBattlePlan?: () => void;
 }
 
 export default function ExecutiveOverview({
@@ -29,6 +34,7 @@ export default function ExecutiveOverview({
   setTab,
   setSelectedAccount,
   onViewEvidence,
+  onOpenBattlePlan,
 }: ExecutiveOverviewProps) {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -52,6 +58,9 @@ export default function ExecutiveOverview({
 
   return (
     <div className="space-y-6">
+      {/* Audio Briefing Player */}
+      <AudioBriefingPlayer />
+
       {/* Toolkit Header Banner matching Questathon Build visual design */}
       <div className="panel p-6 bg-parchmentDark border-[3px] border-ink shadow-retroLg space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b-2 border-ink pb-4">
@@ -67,8 +76,17 @@ export default function ExecutiveOverview({
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
-            <span className="badge-tag bg-pixelYellow text-ink font-bold">
+          <div className="flex items-center gap-3">
+            {onOpenBattlePlan && (
+              <button
+                onClick={onOpenBattlePlan}
+                className="px-3.5 py-1.5 bg-pixelYellow hover:bg-yellow-400 text-ink border-2 border-ink shadow-retro font-mono font-extrabold text-xs flex items-center gap-1.5 cursor-pointer"
+              >
+                <Zap className="w-4 h-4 fill-ink animate-pulse" />
+                <span>DEPLOY BATTLE PLAN</span>
+              </button>
+            )}
+            <span className="badge-tag bg-white text-ink font-bold border-2 border-ink">
               HAND IN READY
             </span>
           </div>

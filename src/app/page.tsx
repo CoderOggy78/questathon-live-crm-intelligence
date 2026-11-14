@@ -19,6 +19,8 @@ import UsageTelemetry from "../components/UsageTelemetry";
 import InteractionsTimeline from "../components/InteractionsTimeline";
 import AICopilot from "../components/AICopilot";
 import RevenueSimulator from "../components/RevenueSimulator";
+import FleetRadarMap from "../components/FleetRadarMap";
+import BattlePlanExecutor from "../components/BattlePlanExecutor";
 import EvidenceModal from "../components/EvidenceModal";
 import WriteNoteModal from "../components/WriteNoteModal";
 import ErrorBoundary from "../components/ErrorBoundary";
@@ -36,6 +38,7 @@ export default function Home() {
   const [activeEvidenceId, setActiveEvidenceId] = useState<string | null>(null);
   const [evidenceAccount, setEvidenceAccount] = useState<string>("A");
   const [noteModalOpen, setNoteModalOpen] = useState(false);
+  const [battlePlanOpen, setBattlePlanOpen] = useState(false);
 
   const loadData = () => {
     fetch("/api/crm")
@@ -55,10 +58,26 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get("tab");
+      if (tabParam) setTab(tabParam);
+      const accParam = params.get("acc");
+      if (accParam) setSelectedAccount(accParam);
+    }
     loadData();
     const interval = setInterval(loadData, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleTabChange = (newTab: string) => {
+    setTab(newTab);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("tab", newTab);
+      window.history.replaceState(null, "", url.toString());
+    }
+  };
 
   const handleViewEvidence = (evidenceId: string, account: string) => {
     setActiveEvidenceId(evidenceId);
@@ -71,7 +90,7 @@ export default function Home() {
       <div>
         <Header
           currentTab={currentTab}
-          setTab={setTab}
+          setTab={handleTabChange}
           selectedAccount={selectedAccount}
           setSelectedAccount={setSelectedAccount}
           syncState={syncState}
@@ -79,7 +98,7 @@ export default function Home() {
 
         <Navigation
           currentTab={currentTab}
-          setTab={setTab}
+          setTab={handleTabChange}
           openNoteModal={() => setNoteModalOpen(true)}
           signalsCount={3}
         />
@@ -110,17 +129,19 @@ export default function Home() {
                 {currentTab === "overview" && (
                   <ExecutiveOverview
                     data={data}
-                    setTab={setTab}
+                    setTab={handleTabChange}
                     setSelectedAccount={setSelectedAccount}
                     onViewEvidence={handleViewEvidence}
+                    onOpenBattlePlan={() => setBattlePlanOpen(true)}
                   />
                 )}
 
                 {currentTab === "briefing" && (
                   <MondayBriefing
                     data={data}
-                    setTab={setTab}
+                    setTab={handleTabChange}
                     openNoteModal={() => setNoteModalOpen(true)}
+                    onOpenBattlePlan={() => setBattlePlanOpen(true)}
                   />
                 )}
 
@@ -135,6 +156,13 @@ export default function Home() {
                   <RevenueSimulator
                     data={data}
                     openNoteModal={() => setNoteModalOpen(true)}
+                    onViewEvidence={handleViewEvidence}
+                  />
+                )}
+
+                {currentTab === "radar" && (
+                  <FleetRadarMap
+                    data={data}
                     onViewEvidence={handleViewEvidence}
                   />
                 )}
@@ -173,7 +201,7 @@ export default function Home() {
                     <AccountWorkspace
                       accountId={(selectedAccount === "B" ? "B" : "A")}
                       data={data}
-                      setTab={setTab}
+                      setTab={handleTabChange}
                       onViewEvidence={handleViewEvidence}
                     />
                   </div>
@@ -183,7 +211,7 @@ export default function Home() {
                   <AccountWorkspace
                     accountId="A"
                     data={data}
-                    setTab={setTab}
+                    setTab={handleTabChange}
                     onViewEvidence={handleViewEvidence}
                   />
                 )}
@@ -192,7 +220,7 @@ export default function Home() {
                   <AccountWorkspace
                     accountId="B"
                     data={data}
-                    setTab={setTab}
+                    setTab={handleTabChange}
                     onViewEvidence={handleViewEvidence}
                   />
                 )}
@@ -318,6 +346,12 @@ export default function Home() {
         onClose={() => setNoteModalOpen(false)}
         defaultAccount={selectedAccount}
         onSuccess={() => loadData()}
+      />
+
+      <BattlePlanExecutor
+        isOpen={battlePlanOpen}
+        onClose={() => setBattlePlanOpen(false)}
+        onNoteAdded={() => loadData()}
       />
     </div>
   );
