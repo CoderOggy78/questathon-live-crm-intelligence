@@ -13,6 +13,8 @@ import BlindSpotFinder from "../components/BlindSpotFinder";
 import EvidenceExplorer from "../components/EvidenceExplorer";
 import LiveEvents from "../components/LiveEvents";
 import SyncSystemStatus from "../components/SyncSystemStatus";
+import UsageTelemetry from "../components/UsageTelemetry";
+import InteractionsTimeline from "../components/InteractionsTimeline";
 import EvidenceModal from "../components/EvidenceModal";
 import WriteNoteModal from "../components/WriteNoteModal";
 
@@ -108,6 +110,46 @@ export default function Home() {
                 />
               )}
 
+              {currentTab === "accounts" && (
+                <div className="space-y-6">
+                  {/* Account Switcher Bar */}
+                  <div className="flex items-center justify-between bg-parchmentDark p-4 border-2 border-ink">
+                    <span className="font-mono font-bold text-sm text-ink">
+                      SELECT ACCOUNT INTELLIGENCE WORKSPACE:
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setSelectedAccount("A")}
+                        className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
+                          selectedAccount === "A"
+                            ? "bg-electricBlue text-white shadow-retro"
+                            : "bg-white text-ink hover:bg-zinc-100"
+                        }`}
+                      >
+                        Account A: Police Alliance (£350k)
+                      </button>
+                      <button
+                        onClick={() => setSelectedAccount("B")}
+                        className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
+                          selectedAccount === "B"
+                            ? "bg-accentOrange text-white shadow-retro"
+                            : "bg-white text-ink hover:bg-zinc-100"
+                        }`}
+                      >
+                        Account B: Aldermoor Industrial (€140k)
+                      </button>
+                    </div>
+                  </div>
+
+                  <AccountWorkspace
+                    accountId={selectedAccount as "A" | "B"}
+                    data={data}
+                    setTab={setTab}
+                    onViewEvidence={handleViewEvidence}
+                  />
+                </div>
+              )}
+
               {currentTab === "account-a" && (
                 <AccountWorkspace
                   accountId="A"
@@ -122,6 +164,20 @@ export default function Home() {
                   accountId="B"
                   data={data}
                   setTab={setTab}
+                  onViewEvidence={handleViewEvidence}
+                />
+              )}
+
+              {currentTab === "usage" && (
+                <UsageTelemetry
+                  data={data}
+                  onViewEvidence={handleViewEvidence}
+                />
+              )}
+
+              {currentTab === "interactions" && (
+                <InteractionsTimeline
+                  data={data}
                   onViewEvidence={handleViewEvidence}
                 />
               )}

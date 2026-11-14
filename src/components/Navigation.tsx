@@ -3,8 +3,9 @@
 import React from "react";
 import {
   LayoutDashboard,
-  Shield,
-  Factory,
+  Building2,
+  Activity,
+  History,
   CircleDollarSign,
   Users,
   CheckSquare,
@@ -30,26 +31,27 @@ export default function Navigation({
   signalsCount = 3,
 }: NavigationProps) {
   const tabs = [
-    { id: "overview", label: "Executive Overview", icon: LayoutDashboard },
-    { id: "account-a", label: "Account A (Police)", icon: Shield },
-    { id: "account-b", label: "Account B (Aldermoor)", icon: Factory },
+    { id: "overview", label: "Book of Business", icon: LayoutDashboard },
+    { id: "accounts", label: "Accounts Directory", icon: Building2 },
+    { id: "usage", label: "Usage & Telemetry", icon: Activity },
+    { id: "interactions", label: "Interactions Timeline", icon: History },
     { id: "deals", label: "Q1: Deal Value", icon: CircleDollarSign },
     { id: "stakeholders", label: "Q2: Power Map", icon: Users },
     { id: "actions", label: "Q3: Next Actions", icon: CheckSquare },
     { id: "risks", label: "Q4: Risk Radar", icon: AlertTriangle },
     { id: "blindspots", label: "Q5: Blind Spots", icon: EyeOff },
-    { id: "evidence", label: "Evidence Explorer", icon: FileSearch },
     {
       id: "signals",
       label: "Live Signals",
       icon: Radio,
       badge: signalsCount > 0 ? `${signalsCount} NEW` : undefined,
     },
+    { id: "evidence", label: "Evidence Archive", icon: FileSearch },
     { id: "system", label: "Sync & MCP Status", icon: Server },
   ];
 
   return (
-    <div className="bg-parchmentDark border-b-[3px] border-ink py-2 px-4 shadow-inner">
+    <div className="bg-parchmentDark border-b-[3px] border-ink py-2 px-4 shadow-inner sticky top-[68px] z-30">
       <div className="mx-auto max-w-7xl flex items-center justify-between gap-2 overflow-x-auto pb-1 sm:pb-0">
         <div className="flex items-center gap-1.5 flex-nowrap">
           {tabs.map((tab) => {
@@ -80,7 +82,7 @@ export default function Navigation({
         {/* Write Note action button */}
         <button
           onClick={openNoteModal}
-          className="whitespace-nowrap ml-2 px-3 py-1.5 text-xs font-bold font-mono bg-electricBlue text-white border-2 border-ink shadow-retro hover:bg-blue-600 flex items-center gap-1.5 cursor-pointer"
+          className="whitespace-nowrap ml-2 px-3 py-1.5 text-xs font-bold font-mono bg-electricBlue text-white border-2 border-ink shadow-retro hover:bg-blue-600 flex items-center gap-1.5 cursor-pointer flex-shrink-0"
         >
           <PenSquare className="w-3.5 h-3.5" />
           <span>WRITE MCP NOTE</span>
