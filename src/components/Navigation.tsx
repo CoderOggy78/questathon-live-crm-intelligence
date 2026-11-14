@@ -14,7 +14,8 @@ import {
   FileSearch,
   Radio,
   Server,
-  PenSquare
+  PenSquare,
+  Receipt
 } from "lucide-react";
 
 interface NavigationProps {
@@ -33,6 +34,7 @@ export default function Navigation({
   const tabs = [
     { id: "overview", label: "Book of Business", icon: LayoutDashboard },
     { id: "accounts", label: "Accounts Directory", icon: Building2 },
+    { id: "ledger", label: "Commercial Ledger", icon: Receipt },
     { id: "usage", label: "Usage & Telemetry", icon: Activity },
     { id: "interactions", label: "Interactions Timeline", icon: History },
     { id: "deals", label: "Q1: Deal Value", icon: CircleDollarSign },
@@ -56,7 +58,9 @@ export default function Navigation({
         <div className="flex items-center gap-1.5 flex-nowrap">
           {tabs.map((tab) => {
             const Icon = tab.icon;
-            const active = currentTab === tab.id;
+            const active =
+              currentTab === tab.id ||
+              (tab.id === "accounts" && (currentTab === "account-a" || currentTab === "account-b"));
             return (
               <button
                 key={tab.id}

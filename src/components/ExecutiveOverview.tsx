@@ -242,7 +242,7 @@ export default function ExecutiveOverview({
                       <button
                         onClick={() => {
                           setSelectedAccount(acc.id);
-                          setTab(isA ? "account-a" : "account-b");
+                          setTab("accounts");
                         }}
                         className="btn-pixel text-xs py-1.5 px-3 flex items-center gap-1 ml-auto"
                       >

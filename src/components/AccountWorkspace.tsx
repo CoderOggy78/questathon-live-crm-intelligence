@@ -70,13 +70,13 @@ export default function AccountWorkspace({
             <div className="text-right font-mono">
               <span className="text-[11px] text-zinc-500 block">BASE CONTRACT ACV</span>
               <span className="text-xl font-bold text-ink">
-                {currencySymbol}{acc.annual_contract_value.toLocaleString()} / yr
+                {currencySymbol}{(acc.annual_contract_value || 0).toLocaleString()} / yr
               </span>
             </div>
             <div className="border-l-2 border-ink pl-3 text-right font-mono">
               <span className="text-[11px] text-zinc-500 block">RENEWAL DEADLINE</span>
               <span className="text-sm font-bold text-riskRed flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> {acc.renewal_deadline}
+                <Clock className="w-3.5 h-3.5" /> {acc.renewal_deadline || "Pending"}
               </span>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function AccountWorkspace({
               OFFICIAL STORY (WHAT THE ACCOUNT SHEET SAYS - UNVERIFIED):
             </span>
             <p className="text-zinc-800 leading-relaxed italic">
-              "{acc.official_story}"
+              "{acc.official_story || 'No official summary provided.'}"
             </p>
           </div>
           <div className="p-3 bg-red-50 border-2 border-red-300 text-red-950">

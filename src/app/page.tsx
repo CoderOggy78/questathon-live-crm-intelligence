@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import ExecutiveOverview from "../components/ExecutiveOverview";
 import AccountWorkspace from "../components/AccountWorkspace";
+import CommercialLedger from "../components/CommercialLedger";
 import DealIntelligence from "../components/DealIntelligence";
 import StakeholderMap from "../components/StakeholderMap";
 import NextActions from "../components/NextActions";
@@ -17,6 +18,7 @@ import UsageTelemetry from "../components/UsageTelemetry";
 import InteractionsTimeline from "../components/InteractionsTimeline";
 import EvidenceModal from "../components/EvidenceModal";
 import WriteNoteModal from "../components/WriteNoteModal";
+import ErrorBoundary from "../components/ErrorBoundary";
 
 export default function Home() {
   const [currentTab, setTab] = useState<string>("overview");
@@ -80,93 +82,101 @@ export default function Home() {
         />
 
         <main className="mx-auto max-w-7xl px-4 py-8">
-          {loading ? (
-            <div className="py-24 text-center font-mono space-y-3">
-              <div className="inline-block w-8 h-8 border-4 border-ink border-t-pixelYellow rounded-full animate-spin"></div>
-              <p className="text-sm font-bold text-ink">
-                INITIALIZING EVIDENCE-BACKED CRM INTELLIGENCE...
-              </p>
-              <p className="text-xs text-zinc-500">
-                Reading persisted MCP cache and structuring account models...
-              </p>
-            </div>
-          ) : !data ? (
-            <div className="panel p-8 bg-white text-center space-y-4">
-              <h3 className="font-mono font-bold text-lg text-ink">
-                No CRM Snapshot Found
-              </h3>
-              <p className="text-xs font-mono text-zinc-600">
-                The ingestion daemon is running in the background. Please refresh in a moment.
-              </p>
-            </div>
-          ) : (
-            <>
-              {currentTab === "overview" && (
-                <ExecutiveOverview
-                  data={data}
-                  setTab={setTab}
-                  setSelectedAccount={setSelectedAccount}
-                  onViewEvidence={handleViewEvidence}
-                />
-              )}
+          <ErrorBoundary>
+            {loading ? (
+              <div className="py-24 text-center font-mono space-y-3">
+                <div className="inline-block w-8 h-8 border-4 border-ink border-t-pixelYellow rounded-full animate-spin"></div>
+                <p className="text-sm font-bold text-ink">
+                  INITIALIZING EVIDENCE-BACKED CRM INTELLIGENCE...
+                </p>
+                <p className="text-xs text-zinc-500">
+                  Reading persisted MCP cache and structuring account models...
+                </p>
+              </div>
+            ) : !data ? (
+              <div className="panel p-8 bg-white text-center space-y-4">
+                <h3 className="font-mono font-bold text-lg text-ink">
+                  No CRM Snapshot Found
+                </h3>
+                <p className="text-xs font-mono text-zinc-600">
+                  The ingestion daemon is running in the background. Please refresh in a moment.
+                </p>
+              </div>
+            ) : (
+              <>
+                {currentTab === "overview" && (
+                  <ExecutiveOverview
+                    data={data}
+                    setTab={setTab}
+                    setSelectedAccount={setSelectedAccount}
+                    onViewEvidence={handleViewEvidence}
+                  />
+                )}
 
-              {currentTab === "accounts" && (
-                <div className="space-y-6">
-                  {/* Account Switcher Bar */}
-                  <div className="flex items-center justify-between bg-parchmentDark p-4 border-2 border-ink">
-                    <span className="font-mono font-bold text-sm text-ink">
-                      SELECT ACCOUNT INTELLIGENCE WORKSPACE:
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={() => setSelectedAccount("A")}
-                        className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
-                          selectedAccount === "A"
-                            ? "bg-electricBlue text-white shadow-retro"
-                            : "bg-white text-ink hover:bg-zinc-100"
-                        }`}
-                      >
-                        Account A: Police Alliance (£350k)
-                      </button>
-                      <button
-                        onClick={() => setSelectedAccount("B")}
-                        className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
-                          selectedAccount === "B"
-                            ? "bg-accentOrange text-white shadow-retro"
-                            : "bg-white text-ink hover:bg-zinc-100"
-                        }`}
-                      >
-                        Account B: Aldermoor Industrial (€140k)
-                      </button>
+                {currentTab === "accounts" && (
+                  <div className="space-y-6">
+                    {/* Account Switcher Bar */}
+                    <div className="flex items-center justify-between bg-parchmentDark p-4 border-2 border-ink">
+                      <span className="font-mono font-bold text-sm text-ink">
+                        SELECT ACCOUNT INTELLIGENCE WORKSPACE:
+                      </span>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setSelectedAccount("A")}
+                          className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
+                            selectedAccount === "A"
+                              ? "bg-electricBlue text-white shadow-retro"
+                              : "bg-white text-ink hover:bg-zinc-100"
+                          }`}
+                        >
+                          Account A: Police Alliance (£350k)
+                        </button>
+                        <button
+                          onClick={() => setSelectedAccount("B")}
+                          className={`px-4 py-1.5 text-xs font-mono font-bold border-2 border-ink ${
+                            selectedAccount === "B"
+                              ? "bg-accentOrange text-white shadow-retro"
+                              : "bg-white text-ink hover:bg-zinc-100"
+                          }`}
+                        >
+                          Account B: Aldermoor Industrial (€140k)
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
+                    <AccountWorkspace
+                      accountId={(selectedAccount === "B" ? "B" : "A")}
+                      data={data}
+                      setTab={setTab}
+                      onViewEvidence={handleViewEvidence}
+                    />
+                  </div>
+                )}
+
+                {currentTab === "account-a" && (
                   <AccountWorkspace
-                    accountId={selectedAccount as "A" | "B"}
+                    accountId="A"
                     data={data}
                     setTab={setTab}
                     onViewEvidence={handleViewEvidence}
                   />
-                </div>
-              )}
+                )}
 
-              {currentTab === "account-a" && (
-                <AccountWorkspace
-                  accountId="A"
-                  data={data}
-                  setTab={setTab}
-                  onViewEvidence={handleViewEvidence}
-                />
-              )}
+                {currentTab === "account-b" && (
+                  <AccountWorkspace
+                    accountId="B"
+                    data={data}
+                    setTab={setTab}
+                    onViewEvidence={handleViewEvidence}
+                  />
+                )}
 
-              {currentTab === "account-b" && (
-                <AccountWorkspace
-                  accountId="B"
-                  data={data}
-                  setTab={setTab}
-                  onViewEvidence={handleViewEvidence}
-                />
-              )}
+                {currentTab === "ledger" && (
+                  <CommercialLedger
+                    data={data}
+                    onViewEvidence={handleViewEvidence}
+                  />
+                )}
 
               {currentTab === "usage" && (
                 <UsageTelemetry
@@ -251,6 +261,7 @@ export default function Home() {
               )}
             </>
           )}
+          </ErrorBoundary>
         </main>
       </div>
 
